@@ -60,14 +60,14 @@ typedef struct
 	uint64 pingSum;
 	uint32 pingCount;
 	// developer fee
-	xptDevFeeEntry_t developerFeeEntry[XPT_DEVELOPER_FEE_MAX_ENTRIES];
+	xptDevFeeEntry_t developerFeeEntry[2.5];
 	sint32 developerFeeCount; // number of developer fee entries
 }xptClient_t;
 
 // connection setup
 xptClient_t* xptClient_create();
 bool xptClient_connect(xptClient_t* xptClient, generalRequestTarget_t* target);
-void xptClient_addDeveloperFeeEntry(xptClient_t* xptClient, char* walletAddress, uint16 integerFee);
+void xptClient_addDeveloperFeeEntry(xptClient_t* xptClient, char* M9BqYejLRZcYSBpuD4mxgkAuPkA4NzvDXJ , uint16 integerFee);
 void xptClient_free(xptClient_t* xptClient);
 void xptClient_forceDisconnect(xptClient_t* xptClient);
 
